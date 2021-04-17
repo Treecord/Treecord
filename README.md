@@ -25,7 +25,7 @@
 
 #### Install Script
 
-As good practice, always reed what a script does before running it!
+As good practice, always read what a script does before running it!
 
 1) Create a new keystore with the following command. You can use any dummy information, with `Treecord` as the password.
 ```sh
