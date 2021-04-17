@@ -213,7 +213,7 @@ diff -ruN discord/res/layout/widget_settings_treecord_seeds.xml src/res/layout/w
 +</androidx.coordinatorlayout.widget.CoordinatorLayout>
 diff -ruN discord/res/layout/widget_settings_treecord.xml src/res/layout/widget_settings_treecord.xml
 --- discord/res/layout/widget_settings_treecord.xml	1970-01-01 00:00:00.000000000 +0000
-+++ src/res/layout/widget_settings_treecord.xml	2021-04-17 14:06:28.682376537 +0000
++++ src/res/layout/widget_settings_treecord.xml	2021-04-17 16:20:30.133042378 +0000
 @@ -0,0 +1,24 @@
 +<?xml version="1.0" encoding="utf-8"?>
 +<androidx.coordinatorlayout.widget.CoordinatorLayout style="@style/UiKit.ViewGroup.Page"
@@ -233,7 +233,7 @@ diff -ruN discord/res/layout/widget_settings_treecord.xml src/res/layout/widget_
 +                    <TextView android:textSize="@dimen/uikit_textsize_medium" android:background="?selectableItemBackground" android:layout_marginTop="4.0dip" android:text="@string/treecord_settings_subheader" style="@style/UiKit.TextView.Semibold" />
 +                </LinearLayout>
 +            </LinearLayout>
-+            <TextView android:text="@string/treecord_settings_seeds" android:id="@id/treecord_settings_seeds" app:drawableStartCompat="@drawable/treecord_github_icon_24dp" app:drawableTint="?colorInteractiveNormal" style="@style/UiKit.Settings.Item.Icon" />
++            <TextView android:text="@string/treecord_settings_seeds" android:id="@id/treecord_settings_seeds" app:drawableStartCompat="@drawable/ic_behavior_24dp" app:drawableTint="?colorInteractiveNormal" style="@style/UiKit.Settings.Item.Icon" />
 +            <TextView android:text="@string/treecord_settings_repo" android:id="@id/treecord_settings_repo" app:drawableStartCompat="@drawable/treecord_github_icon_24dp" app:drawableTint="?colorInteractiveNormal" style="@style/UiKit.Settings.Item.Icon" />
 +            <TextView android:text="@string/treecord_settings_discord" android:id="@id/treecord_settings_discord" app:drawableStartCompat="@drawable/ic_channel_text" app:drawableTint="?colorInteractiveNormal" style="@style/UiKit.Settings.Item.Icon" />
 +        </LinearLayout>
@@ -361,11 +361,11 @@ diff -ruN discord/res/values/public.xml src/res/values/public.xml
 +</resources>
 diff -ruN discord/res/values/strings.xml src/res/values/strings.xml
 --- discord/res/values/strings.xml	2021-04-17 14:07:58.709191613 +0000
-+++ src/res/values/strings.xml	2021-04-17 14:06:29.550374670 +0000
++++ src/res/values/strings.xml	2021-04-17 16:20:30.222042227 +0000
 @@ -1,5 +1,27 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
-+    <string name="treecord_settings_header">Treecord v0.1 Beta</string>
++    <string name="treecord_settings_header">Treecord v0.1</string>
 +    <string name="treecord_settings_subheader">Developed by L3af</string>
 +    <string name="treecord_settings">Treecord</string>
 +    <string name="treecord_settings_discord">Official Server</string>
@@ -659,11 +659,10 @@ diff -ruN discord/res/values-az/strings.xml src/res/values-az/strings.xml
      <string name="abc_action_menu_overflow_description">Digər seçimlər</string>
 diff -ruN discord/res/values-cs/strings.xml src/res/values-cs/strings.xml
 --- discord/res/values-cs/strings.xml	2021-04-17 14:07:59.482190098 +0000
-+++ src/res/values-cs/strings.xml	2021-04-17 14:06:29.134375564 +0000
-@@ -1,5 +1,26 @@
++++ src/res/values-cs/strings.xml	2021-04-17 16:20:30.147042354 +0000
+@@ -1,5 +1,25 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
-+    <string name="treecord_settings_header">Treecord v0.1 Beta (Build 001)</string>
 +    <string name="treecord_settings_subheader">Vyvíjeno L3af</string>
 +    <string name="treecord_settings">Treecord</string>
 +    <string name="treecord_settings_discord">Oficiální Server</string>
@@ -689,11 +688,10 @@ diff -ruN discord/res/values-cs/strings.xml src/res/values-cs/strings.xml
      <string name="_new">nové</string>
 diff -ruN discord/res/values-hi/strings.xml src/res/values-hi/strings.xml
 --- discord/res/values-hi/strings.xml	2021-04-17 14:07:57.154194666 +0000
-+++ src/res/values-hi/strings.xml	2021-04-17 14:06:29.236375345 +0000
-@@ -1,5 +1,26 @@
++++ src/res/values-hi/strings.xml	2021-04-17 16:20:30.174042308 +0000
+@@ -1,5 +1,25 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
-+    <string name="treecord_settings_header">Treecord v0.1 Beta (Build 001)</string>
 +    <string name="treecord_settings_subheader">L3af द्वारा विकसित</string>
 +    <string name="treecord_settings">Treecord</string>
 +    <string name="treecord_settings_discord">आधिकारिक सर्वर</string>
@@ -719,11 +717,10 @@ diff -ruN discord/res/values-hi/strings.xml src/res/values-hi/strings.xml
      <string name="_new">नया</string>
 diff -ruN discord/res/values-ru/strings.xml src/res/values-ru/strings.xml
 --- discord/res/values-ru/strings.xml	2021-04-17 14:07:58.181192649 +0000
-+++ src/res/values-ru/strings.xml	2021-04-17 14:06:29.406374979 +0000
-@@ -1,5 +1,26 @@
++++ src/res/values-ru/strings.xml	2021-04-17 16:20:30.192042278 +0000
+@@ -1,5 +1,25 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
-+    <string name="treecord_settings_header">Treecord v0.1 Beta (Build 001)</string>
 +    <string name="treecord_settings_subheader">Разработано L3af.</string>
 +    <string name="treecord_settings">Treecord</string>
 +    <string name="treecord_settings_discord">Официальный сервер</string>
@@ -749,30 +746,32 @@ diff -ruN discord/res/values-ru/strings.xml src/res/values-ru/strings.xml
      <string name="_new">новое</string>
 diff -ruN discord/res/values-tr/strings.xml src/res/values-tr/strings.xml
 --- discord/res/values-tr/strings.xml	2021-04-17 14:07:59.070190905 +0000
-+++ src/res/values-tr/strings.xml	2021-04-17 14:06:29.453374878 +0000
-@@ -1,5 +1,26 @@
++++ src/res/values-tr/strings.xml	2021-04-17 16:20:30.207042252 +0000
+@@ -1,5 +1,28 @@
  <?xml version="1.0" encoding="utf-8"?>
  <resources>
 +    <string name="treecord_settings_header">Treecord v0.1 Beta (Build 001)</string>
-+    <string name="treecord_settings_subheader">L3af tarafından yaradıldı.</string>
++    <string name="treecord_settings_subheader">L3af Tarafından Geliştirildi.</string>
 +    <string name="treecord_settings">Treecord</string>
-+    <string name="treecord_settings_discord">Resmi server</string>
++    <string name="treecord_settings_discord">Resmi Sunucu</string>
 +    <string name="treecord_settings_seeds">Seeds</string>
-+    <string name="treecord_settings_repo">Projenin saklandığı  yer</string>
++    <string name="treecord_settings_repo">Repository</string>
 +    <string name="treecord_settings_username_header">Kullanıcı adı</string>
-+    <string name="treecord_settings_uns_toggle">Nick kullanılırsa adları göster</string>
-+    <string name="treecord_settings_unds_toggle">Adları diskirminatorla göster</string>
-+    <string name="treecord_slash_test_description">Komut hakkında</string>
++    <string name="treecord_settings_uns_toggle">Sunucuda kullanıcı adı değiştirildiğinde orijinal kullanıcı adını göster</string>
++    <string name="treecord_settings_unds_toggle">Kullanıcı adlarını discrim ile göster</string>
++    <string name="treecord_slash_test_description">Komut açıklaması</string>
 +    <string name="treecord_slash_test_gen_arg_description">Mesaj</string>
-+    <string name="treecord_settings_chat_header">Chat</string>
-+    <string name="treecord_settings_chat_hide_blocked_toggle">Bloklanmışları gizle\n(Yeniden başlatma gerekdirir)</string>
-+    <string name="treecord_settings_misc_header">Diğer</string>
-+    <string name="treecord_settings_misc_enable_staff_toggle">Personel modunu etkinleşdir</string>
-+    <string name="treecord_slash_upper_description">Mesajı büyük harf ile yaz</string>
-+    <string name="treecord_slash_lower_description">Mesajı kiçik harf ile yaz</string>
-+    <string name="treecord_slash_bold_description">Mesajı kalın şrift ile yaz</string>
++    <string name="treecord_settings_chat_header">Sohbet</string>
++    <string name="treecord_settings_chat_hide_blocked_toggle">Engellenenleri gizle(Tamamen çalışması için yeniden başlatma gerekir)</string>
++    <string name="treecord_settings_misc_header">Çeşitli</string>
++    <string name="treecord_settings_misc_enable_staff_toggle">Personel modunu etkinleştir</string>
++    <string name="treecord_slash_upper_description">Mesajı büyük harf yap</string>
++    <string name="treecord_slash_lower_description">Mesajı küçük harf yap</string>
++    <string name="treecord_slash_bold_description">Mesajınızı kalın yapın</string>
 +    <string name="treecord_slash_st_description">Mesajınızın üstünü çizin</string>
-+    <string name="treecord_slash_clap_description">👏 Mesajınızı vurgulayın 👏</string>
++    <string name="treecord_slash_clap_description">Mesajınıza 👏 Mesaj 👏 vurgusu ekleyin</string>
++    <string name="treecord_settings_tags">Etiketler</string>
++    <string name="treecord_settings_tags_empty">Etiket bulunamadı, başlamak için yeni bir tane oluştur!</string>
 +
      <string name="_continue">Devam Et</string>
      <string name="_default">Varsayılan</string>
@@ -1696,8 +1695,8 @@ diff -ruN discord/smali_classes3/me/l3af/treecord/BadgeHelper$CustomBadge.smali 
 +.end method
 diff -ruN discord/smali_classes3/me/l3af/treecord/BadgeHelper.smali src/smali_classes3/me/l3af/treecord/BadgeHelper.smali
 --- discord/smali_classes3/me/l3af/treecord/BadgeHelper.smali	1970-01-01 00:00:00.000000000 +0000
-+++ src/smali_classes3/me/l3af/treecord/BadgeHelper.smali	2021-04-17 14:06:34.804363405 +0000
-@@ -0,0 +1,161 @@
++++ src/smali_classes3/me/l3af/treecord/BadgeHelper.smali	2021-04-17 16:20:30.223042225 +0000
+@@ -0,0 +1,173 @@
 +.class public Lme/l3af/treecord/BadgeHelper;
 +.super Ljava/lang/Object;
 +
@@ -1741,7 +1740,19 @@ diff -ruN discord/smali_classes3/me/l3af/treecord/BadgeHelper.smali src/smali_cl
 +
 +    new-instance v2, Lme/l3af/treecord/BadgeHelper$CustomBadge;
 +    const-string v3, "Tr"
-+    const-string v4, "Translator - Az, Tr, Ru"
++    const-string v4, "Translator - Az, Ru, Tr"
++    invoke-direct {v2, v3, v4}, Lme/l3af/treecord/BadgeHelper$CustomBadge;-><init>(Ljava/lang/String;Ljava/lang/String;)V
++    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
++
++    ## Translator badges
++    # ekto#8910
++    const-wide v2, 0x63551F85B800014L
++    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
++    move-result-object v1
++
++    new-instance v2, Lme/l3af/treecord/BadgeHelper$CustomBadge;
++    const-string v3, "Tr"
++    const-string v4, "Translator - Tr"
 +    invoke-direct {v2, v3, v4}, Lme/l3af/treecord/BadgeHelper$CustomBadge;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 +    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 +
