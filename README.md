@@ -20,13 +20,30 @@
 - Java 8+
 - ADB (If you want to automatically sideload to your device)
 - *unix (Or some way to patch files)
-- Default Discord v67.12 APK \*[cough cough](https://apkpure.com/discord-talk-video-chat-hang-out-with-friends/com.discord/)\*
+- Default Discord v67.12 APK \*[cough cough](https://apkpure.com/discord-talk-video-chat-hang-out-with-friends/com.discord/)\* (Placed in `./discord.apk` if you want to use the install script)
 
-##### Steps
+
+#### Install Script
+
+As good practice, always reed what a script does before running it!
+
+1) Create a new keystore with the following command. You can use any dummy information, with `Treecord` as the password.
+```sh
+keytool -genkey -keystore ./lib/treecord.keystore -validity 10000 -alias Treecord
+```
+
+2) Copy theme patch to `./theme.patch` if you want to apply a theme
+3) Connect your device to you computer if you want to sideload with ADB
+4) Run the script
+```sh
+./install
+```
+
+#### Manually
 
 1) Decompile Discord
 ```sh
-java -jar ./lib/apktool.jar d /path/to/discord.apk -o ./src/
+./lib/apktool d /path/to/discord.apk -o ./discord/
 ```
 2) Apply Treecord patch
 ```sh
@@ -38,7 +55,7 @@ patch -s -p0 < ./themes/<theme-name>/theme.patch
 ```
 3) Build the APK
 ```sh
-java -jar ./lib/apktool.jar b ./src
+./lib/apktool b ./discord/
 ```
 4) Create a new keystore with the following command. You can use any dummy information, just remember the password for later.
 ```sh
@@ -46,12 +63,12 @@ keytool -genkey -keystore <file>.keystore -validity 10000 -alias <alias>
 ```
 5) Sign the APK
 ```sh
-jarsigner -storepass <password> -keystore <file>.keystore <alias>
+jarsigner -storepass <password> -keystore <file>.keystore ./discord/dist/treecord.apk <alias>
 ```
-6) If you don't want to sideload it with ADB the APK is located in `./src/dist/treecord.apk`
+6) If you don't want to sideload it with ADB the APK is located in `./discord/dist/treecord.apk`
 7) Sideload with ADB
 ```sh
-adb install -r ./src/dist/treecord.apk
+adb install -r ./discord/dist/treecord.apk
 ```
 8) Launch with ADB 
 ```sh

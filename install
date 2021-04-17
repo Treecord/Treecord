@@ -1,0 +1,43 @@
+#!/usr/bin/env sh
+
+set -e
+
+if [ -d ./discord/ ]
+then
+    echo "WARING: Deleting ./discord/ directory in 10 seconds!"
+    sleep 10
+
+    echo "-- Deleting ./discord/"
+    rm -rf ./discord/
+fi
+
+if [ ! -f ./discord.apk ]
+then
+    echo "Discord not found at $(pwd)/discord.apk"
+    exit
+fi
+
+echo "-- Decompiling Discord APK"
+./lib/apktool d ./discord.apk -o ./discord/
+
+echo "-- Applying Treecord patch"
+patch -s -p0 < ./treecord.patch
+
+if [ -f ./theme.patch ]
+then
+    echo "-- Found theme patch"
+    echo "-- Applying theme patch"
+    patch -s -p0 < ./theme.patch
+fi
+
+echo "-- Building Treecord APK"
+./lib/apktool b ./discord/
+
+echo "-- Signing Treecord APK"
+jarsigner -storepass "Treecord" -keystore ./lib/treecord.keystore ./discord/dist/treecord.apk Treecord
+
+echo "-- Installing Treecord APK"
+adb install -r ./discord/dist/treecord.apk 1> /dev/null
+
+echo "-- Starting Treecord"
+adb shell monkey -p me.l3af.treecord 1 1> /dev/null
