@@ -9,6 +9,10 @@
     </a>
 </p>
 
+## Description
+A mobile discord patch to include more features. Currently ***STALE***. The latest release patches an outdated version of Discord.
+The ETA for resuming work is currently unknown.
+
 ## How to build
 
 #### Notes
